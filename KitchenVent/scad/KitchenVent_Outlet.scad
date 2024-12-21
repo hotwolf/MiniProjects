@@ -32,43 +32,70 @@
 //###############################################################################
 include <./KitchenVent_Config.scad>
 
-socketH = 10;  //socket height
-radius  = 10;  //corner radius
-//Outlet
-module KitchenVent_Outlet_stl() {
-    stl("KitchenVent_Outlet");
-    $fn=64;
+connectorD = 10;   //diameter of the connector
+connectorC =  0.1; //clearance of the connector
+socketH    = 15;   //socket height
+radius     = 10;   //corner radius
+
+//Outlet top
+module KitchenVent_Outlet_top_stl() {
+    stl("KitchenVent_Outlet_top");
+    $fn=128;
+    color(pp1_colour)
+    //translate([0,-pipeY,0])
+    //Top
+    difference() {
+        union() {
+            translate([0,0,socketH])
+            rotate_extrude() {
+                hull() {
+                    translate([(cutoutMaxD/2)-radius,(cutoutMaxD/2)-2*radius,0]) circle(r=radius);
+                    translate([                    0,                    0,0]) square([radius,(cutoutMaxD/2)-radius]);
+                    translate([                    0,                    0,0]) square([cutoutMaxD/2,radius]);
+                }
+            } 
+            for (ang=[-40,-20,0,20,40]) {
+                rotate([0,0,ang])
+                translate([0,(cutoutMaxD+pipeD)/4,0])
+                cylinder(d=connectorD-connectorC,h=socketH);
+            }        
+        }
+        hull() {       
+            for (pos=[[  0,    0,socketH],
+                      [-200,-100,socketH],
+                      [ 200,-100,socketH]]) {
+                translate(pos)
+                scale([pipeD+pipeC,pipeD+pipeC,(pipeD+pipeC)]) sphere(r=0.5);
+            }
+        }
+    }
+}
+*KitchenVent_Outlet_top_stl();
+
+//Outlet bottom
+module KitchenVent_Outlet_bottom_stl() {
+    stl("KitchenVent_Outlet_bottom");
+    $fn=128;
     color(pp1_colour)
     //translate([0,-pipeY,0])
     union() {
         //Rim
         difference() {
             translate([0,0,0]) cylinder(d=cutoutMaxD,h=socketH);
-             pipeCutout(y=0,z=-10);
-        }
-        //Top
-        difference() {
-            translate([0,0,socketH])
-            rotate_extrude() {
-                hull() {
-                    translate([(cutoutMaxD/2)-radius,(cutoutMaxD/2)-radius,0]) circle(r=radius);
-                    translate([                    0,                    0,0]) square([radius,cutoutMaxD/2]);
-                    translate([                    0,                    0,0]) square([cutoutMaxD/2,radius]);
+            union() {
+                pipeCutout(y=0,z=-10);
+                for (ang=[-40,-20,0,20,40]) {
+                    rotate([0,0,ang])
+                    translate([0,(cutoutMaxD+pipeD)/4,-10])
+                    cylinder(d=connectorD+connectorC,h=socketH+20);
                 }
             }
-            hull() {       
-                for (pos=[[  0,    0,socketH],
-                          [-200,-100,socketH],
-                          [ 200,-100,socketH]]) {
-                    translate(pos)
-                    scale([pipeD+pipeC,pipeD+pipeC,(pipeD+pipeC)]) sphere(r=0.5);
-                }
-            }
-        }
+         }
     }
 }
-*KitchenVent_Outlet_stl();
-//! Assemble outlet
+*KitchenVent_Outlet_bottom_stl();
+
+//! Glue printed parts together
 module KitchenVent_Outlet_assembly() {
     //pose([95, 0, 160],[0, 0, 50])
     assembly("KitchenVent_Outlet") {
@@ -79,9 +106,13 @@ module KitchenVent_Outlet_assembly() {
         //Pipe
         //explode([0,0,0]) pipe();
  
-        //Outlet
+        //Outlet top
+        explode([0,0,80])
+        translate([0,-pipeY,pipeL-10]) KitchenVent_Outlet_top_stl();
+        
+        //Outlet bottom
         explode([0,0,40])
-        translate([0,-pipeY,pipeL-10]) KitchenVent_Outlet_stl();
+        translate([0,-pipeY,pipeL-10]) KitchenVent_Outlet_bottom_stl();
     }
 }
 

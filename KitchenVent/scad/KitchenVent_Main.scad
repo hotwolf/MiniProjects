@@ -32,11 +32,10 @@
 //###############################################################################
 include <./KitchenVent_Config.scad>
 
-
 //! Assemble all parts 
-module KitchenVent_assembly() {
+module main_assembly() {
     //pose([95, 0, 160],[0, 0, 50])
-    assembly("KitchenVent") {
+    assembly("main") {
 
         //Shelf
         explode([0,-400,0]) shelf(z=pipeL/2);
@@ -48,7 +47,7 @@ module KitchenVent_assembly() {
         explode([0,0,-100]) pipe();
 
         //Shelf cover
-        KitchenVent_ShelfCover_assembly();
+        //KitchenVent_ShelfCover_assembly();
         
         //Top mount
         explode(-40)
@@ -62,7 +61,7 @@ module KitchenVent_assembly() {
 
 if ($preview) {
     $explode=1;
-    KitchenVent_assembly();
+    main_assembly();
 }
 
 

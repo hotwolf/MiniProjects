@@ -30,8 +30,8 @@
 //#      - Initial release                                                      #
 //#                                                                             #
 //###############################################################################
-include <../../lib/NopSCADlib/lib.scad>
-//include <../../lib/NopSCADlib/core.scad>
+//include <../../lib/NopSCADlib/lib.scad>
+include <../../lib/NopSCADlib/core.scad>
 //include <../../lib/NopSCADlib/vitamins/screws.scad>
 use     <./KitchenVent_Parts.scad>
 use     <./KitchenVent_ShelfCover.scad>
@@ -39,12 +39,12 @@ use     <./KitchenVent_TopMount.scad>
 use     <./KitchenVent_Outlet.scad>
 
 //Global Variables
-pipeD      = 150;     //outer pipe diameter
-pipeC      =   0.4;   //pipe clearance
+pipeD      = 154;     //outer pipe diameter
+pipeC      =   0.0;   //pipe clearance
 pipeL      = 600;     //pipe length
 pipeY      = 200;     //distance from pipe center to back wall
 cutoutMinD = 160;     //diameter of the cut out
-cutoutMaxD = 180;     //diameter of the cover
+cutoutMaxD = 190;     //diameter of the cover
 boardW     =  18;     //width of the closet walls/shelfs
 boardC     =   0.4;   //board clearance
 coverW     =   2;     //width of the cover
