@@ -1,0 +1,76 @@
+[
+    {
+        "name": "KitchenVent_Outlet_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {},
+        "printed": {
+            "KitchenVent_Outlet_top.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            },
+            "KitchenVent_Outlet_bottom.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "KitchenVent_TopMount_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "washer(M4_washer): Washer  M4 x 9mm x 0.8mm": {
+                "count": 4
+            },
+            "screw(No632_pan_screw, 16): Screw 6-32 pan x 16mm": {
+                "count": 4
+            }
+        },
+        "printed": {
+            "KitchenVent_TopMount.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "KitchenVent_ShelfCover_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {},
+        "printed": {
+            "KitchenVent_ShelfCover.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "main_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "KitchenVent_ShelfCover_assembly": 1,
+            "KitchenVent_TopMount_assembly": 1,
+            "KitchenVent_Outlet_assembly": 1
+        },
+        "vitamins": {},
+        "printed": {},
+        "routed": {}
+    }
+]

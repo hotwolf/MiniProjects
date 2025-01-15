@@ -1,8 +1,8 @@
 //###############################################################################
-//# KitchenVent - Configuration                                                 #
+//# RadioHooks - Configuration                                                  #
 //###############################################################################
 //#    Copyright 2024 Dirk Heisswolf                                            #
-//#    This file is part of the KitchenVent project.                            #
+//#    This file is part of the RadiatorHooks project.                          #
 //#                                                                             #
 //#    This project is free software: you can redistribute it and/or modify     #
 //#    it under the terms of the GNU General Public License as published by     #
@@ -22,34 +22,23 @@
 //#                                                                             #
 //###############################################################################
 //# Description:                                                                #
-//#   Global configurations for the DoorHandleTester project.                   #
+//#   Global configurations for the RadiatorHooks project.                      #
 //#                                                                             #
 //###############################################################################
 //# Version History:                                                            #
-//#   December 15, 2024                                                         #
+//#   December 21, 2024                                                         #
 //#      - Initial release                                                      #
 //#                                                                             #
 //###############################################################################
 //include <../../lib/NopSCADlib/lib.scad>
 include <../../lib/NopSCADlib/core.scad>
-include <../../lib/NopSCADlib/vitamins/screws.scad>
-use     <../../lib/NopSCADlib/printed/handle.scad>
-use     <./DoorHandleTester_Parts.scad>
-use     <./DoorHandleTester_Clamp.scad>
+use     <./RadiatorHooks_Parts.scad>
+use     <./RadiatorHooks_Clamp.scad>
 
 //Global Variables
-//doorW    = 16.4;                                //width of the door (Method)
-doorW      = 19.4;                                //width of the door (Pax)
-doorC      =  0.0;                                //door clearance
-screwT     = M4_dome_screw;                       //screw type
-screwHoleR = screw_clearance_radius(screwT);      //radius of the screw hole
-//screwHeadR = screw_head_radius(screwT);         //radius of the screw head
-screwHeadR =  10/2;                              //radius of the screw head
-//screwHeadH = screw_head_height(screwT);         //height of the screw head
-screwHeadH =  4;                                  //height of the screw head
-screwHeadC =  0.4;                                //screw head clearance
-screwX     = 25;                                  //X position of the screw
-clampD     =  2;                                  //depth of the clamp (one side)
-clampL     = screwX+screwHeadR+clampD;            //length of the clamp (one side)
-clampW     = 20;                                  //width of the clamp (one side)
+pipeD      =  25;      //diameter of a radiator pipe
+pipeC      =   0.0;    //clearance
+clampD     =   2;      //thickness of the clamp
+clampW     =  20;      //width of the clamp
+clampA     = 240;      //width of the clamp
 

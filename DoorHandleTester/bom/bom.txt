@@ -1,0 +1,32 @@
+Vitamins:
+ D   
+ o   
+ o   
+ r   
+ h   
+ a   
+ n   
+ d   
+ l   
+ e   
+ t   
+ e   
+ s   
+ t   
+ e   
+ r   
+     
+ c   
+ l  M
+ a  a
+ m  i
+ p  n
+ 2|  |  2 Screw M4 dome x 25mm
+
+Printed:
+ 2|  |  2 DoorHandleTester_Clamp.stl
+ 1|  |  1 handle.stl
+
+Assemblies:
+  1 DoorHandleTester_Clamp_assembly
+  1 main_assembly

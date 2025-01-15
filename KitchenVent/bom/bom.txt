@@ -1,0 +1,37 @@
+Vitamins:
+    K      
+    i      
+    t  K   
+    c  i   
+ K  h  t   
+ i  e  c   
+ t  n  h   
+ c  v  e   
+ h  e  n   
+ e  n  v   
+ n  t  e   
+ v     n   
+ e  s  t   
+ n  h      
+ t  e  t   
+    l  o   
+ o  f  p   
+ u  c  m   
+ t  o  o  M
+ l  v  u  a
+ e  e  n  i
+ t  r  t  n
+  |  | 4|  |  4 Screw 6-32 pan x 16mm
+  |  | 4|  |  4 Washer  M4 x 9mm x 0.8mm
+
+Printed:
+ 1|  |  |  |  1 KitchenVent_Outlet_bottom.stl
+ 1|  |  |  |  1 KitchenVent_Outlet_top.stl
+  | 1|  |  |  1 KitchenVent_ShelfCover.stl
+  |  | 1|  |  1 KitchenVent_TopMount.stl
+
+Assemblies:
+  1 KitchenVent_Outlet_assembly
+  1 KitchenVent_ShelfCover_assembly
+  1 KitchenVent_TopMount_assembly
+  1 main_assembly

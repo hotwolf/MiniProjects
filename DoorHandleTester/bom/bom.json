@@ -1,0 +1,39 @@
+[
+    {
+        "name": "DoorHandleTester_Clamp_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "screw(M4_dome_screw, 25): Screw M4 dome x 25mm": {
+                "count": 2
+            }
+        },
+        "printed": {
+            "DoorHandleTester_Clamp.stl": {
+                "count": 2,
+                "colour": "[0, 0.572549, 0]"
+            },
+            "handle.stl": {
+                "count": 1,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
+        "routed": {}
+    },
+    {
+        "name": "main_assembly",
+        "big": null,
+        "ngb": false,
+        "zoomed": 0,
+        "count": 1,
+        "assemblies": {
+            "DoorHandleTester_Clamp_assembly": 1
+        },
+        "vitamins": {},
+        "printed": {},
+        "routed": {}
+    }
+]

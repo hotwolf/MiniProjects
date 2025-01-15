@@ -1,5 +1,5 @@
 //###############################################################################
-//# KitchenVent - Configuration                                                 #
+//# KitchenVent - Test                                                          #
 //###############################################################################
 //#    Copyright 2024 Dirk Heisswolf                                            #
 //#    This file is part of the KitchenVent project.                            #
@@ -22,7 +22,7 @@
 //#                                                                             #
 //###############################################################################
 //# Description:                                                                #
-//#   Global configurations for the DoorHandleTester project.                   #
+//#   Test prints                                                               #
 //#                                                                             #
 //###############################################################################
 //# Version History:                                                            #
@@ -30,26 +30,64 @@
 //#      - Initial release                                                      #
 //#                                                                             #
 //###############################################################################
-//include <../../lib/NopSCADlib/lib.scad>
-include <../../lib/NopSCADlib/core.scad>
-include <../../lib/NopSCADlib/vitamins/screws.scad>
-use     <../../lib/NopSCADlib/printed/handle.scad>
-use     <./DoorHandleTester_Parts.scad>
-use     <./DoorHandleTester_Clamp.scad>
+include <./KitchenVent_Config.scad>
 
-//Global Variables
-//doorW    = 16.4;                                //width of the door (Method)
-doorW      = 19.4;                                //width of the door (Pax)
-doorC      =  0.0;                                //door clearance
-screwT     = M4_dome_screw;                       //screw type
-screwHoleR = screw_clearance_radius(screwT);      //radius of the screw hole
-//screwHeadR = screw_head_radius(screwT);         //radius of the screw head
-screwHeadR =  10/2;                              //radius of the screw head
-//screwHeadH = screw_head_height(screwT);         //height of the screw head
-screwHeadH =  4;                                  //height of the screw head
-screwHeadC =  0.4;                                //screw head clearance
-screwX     = 25;                                  //X position of the screw
-clampD     =  2;                                  //depth of the clamp (one side)
-clampL     = screwX+screwHeadR+clampD;            //length of the clamp (one side)
-clampW     = 20;                                  //width of the clamp (one side)
+//Global variables
+screwT  = No632_pan_screw;
+radius  = 10;
+corners = [[ cutoutMaxD/2-radius, cutoutMaxD/2-radius,0],
+           [ cutoutMaxD/2-radius,-cutoutMaxD/2+radius,0],
+           [-cutoutMaxD/2+radius,-cutoutMaxD/2+radius,0],
+           [-cutoutMaxD/2+radius, cutoutMaxD/2-radius,0]];
 
+//Test print
+module KitchenVent_Test_stl() {
+    stl("KitchenVent_Test");
+    
+    color(pp1_colour)
+    //translate([0,-pipeY,0])
+    difference() {
+         translate([0,0,0]) cylinder(d=cutoutMinD, h=5);
+         pipeCutout(y=0,z=-10);
+    }
+}
+KitchenVent_Test_stl();
+
+//! Assemble top mount 
+module KitchenVent_TopMount_assembly() {
+    //pose([95, 0, 160],[0, 0, 50])
+    assembly("KitchenVent_TopMount") {
+
+        //Shelf
+        //explode([0,0,0]) cabinetTop(z=pipeL-boardW-10);
+        
+        //Pipe
+        //explode([0,0,-100]) pipe();
+
+        //Screws
+        explode([0,0,-60])
+        for (pos = corners) {
+            translate([pos.x,pos.y-pipeY,pipeL-boardW-coverW-10]) {
+                rotate([180,0,0])
+                screw_and_washer(No632_pan_screw, 16);
+            }
+        }
+
+        //Top mount
+        explode([0,0,-40])
+        translate([0,-pipeY,pipeL-boardW-10]) KitchenVent_TopMount_stl();
+    }
+}
+
+if ($preview) {
+    $explode=1;
+
+    //Shelf
+    explode([0,0,0]) cabinetTop(z=pipeL-boardW-10);
+        
+    //Pipe
+    explode([0,0,-100]) pipe();
+
+    //Top mount
+    KitchenVent_Ttestt_assembly();
+}

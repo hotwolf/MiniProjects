@@ -1,0 +1,3 @@
+{
+    "RadiatorHooks_Clamp.stl": 9.289
+}

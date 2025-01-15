@@ -37,7 +37,12 @@ module main_assembly() {
     //pose([95, 0, 160],[0, 0, 50])
     assembly("main") {
 
-    
+    //Door
+    explode([-40,0,0])
+    door();
+        
+    //Clamp
+    DoorHandleTester_Clamp_assembly();    
     }
 }
 

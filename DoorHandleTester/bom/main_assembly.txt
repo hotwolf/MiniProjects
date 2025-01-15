@@ -1,0 +1,4 @@
+main_assembly:
+
+Assemblies:
+  1 DoorHandleTester_Clamp_assembly

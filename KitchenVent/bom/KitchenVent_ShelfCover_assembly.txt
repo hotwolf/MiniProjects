@@ -1,0 +1,3 @@
+KitchenVent_ShelfCover_assembly:
+Printed:
+  1 KitchenVent_ShelfCover.stl

@@ -1,0 +1,11 @@
+{
+    "assemblies/KitchenVent_ShelfCover_assembled.png": 1.214,
+    "assemblies/KitchenVent_ShelfCover_assembly.png": 1.338,
+    "assemblies/KitchenVent_TopMount_assembled.png": 1.565,
+    "assemblies/KitchenVent_TopMount_assembly.png": 1.524,
+    "assemblies/KitchenVent_Outlet_assembled.png": 31.25,
+    "assemblies/KitchenVent_Outlet_assembly.png": 31.271,
+    "assemblies/main_assembled.png": 33.032,
+    "assemblies/main_assembly.png": 31.088,
+    "readme.html": 0.018
+}

@@ -1,0 +1,6 @@
+main_assembly:
+
+Assemblies:
+  1 KitchenVent_Outlet_assembly
+  1 KitchenVent_ShelfCover_assembly
+  1 KitchenVent_TopMount_assembly

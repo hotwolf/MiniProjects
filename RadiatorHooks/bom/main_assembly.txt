@@ -1,0 +1,4 @@
+main_assembly:
+
+Assemblies:
+  1 RadiatorHooks_Clamp_assembly

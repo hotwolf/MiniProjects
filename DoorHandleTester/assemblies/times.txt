@@ -1,0 +1,5 @@
+{
+    "assemblies/DoorHandleTester_Clamp_assembled.png": 1.405,
+    "assemblies/DoorHandleTester_Clamp_assembly.png": 1.35,
+    "readme.html": 0.017
+}

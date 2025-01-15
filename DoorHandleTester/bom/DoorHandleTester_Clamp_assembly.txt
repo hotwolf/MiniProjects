@@ -1,0 +1,7 @@
+DoorHandleTester_Clamp_assembly:
+Vitamins:
+  2 Screw M4 dome x 25mm
+
+Printed:
+  2 DoorHandleTester_Clamp.stl
+  1 handle.stl

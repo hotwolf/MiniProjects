@@ -1,0 +1,31 @@
+stls/RadiatorHooks_Clamp.stl: \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/fillet.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/washer.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/washers.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/maths.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/nuts.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/core.scad \
+	tmp/stl.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/teardrops.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/nut.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/core.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/global_defs.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/global.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/screws.scad \
+	/home/dirk/Projects/MiniProjects/RadiatorHooks/scad/RadiatorHooks_Config.scad \
+	/home/dirk/Projects/MiniProjects/RadiatorHooks/scad/RadiatorHooks_Clamp.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/clip.scad \
+	/home/dirk/Projects/MiniProjects/RadiatorHooks/../lib/NopSCADlib/global_defs.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/screw.scad \
+	/home/dirk/Projects/MiniProjects/RadiatorHooks/scad/RadiatorHooks_Parts.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/polyholes.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/rounded_cylinder.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/thread.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/tube.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/inserts.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/insert.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/quadrant.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/sweep.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/bom.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/sphere.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/rounded_rectangle.scad

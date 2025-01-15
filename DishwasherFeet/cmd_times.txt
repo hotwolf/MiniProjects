@@ -1,0 +1,7 @@
+magick tmp/DishwasherFeet_Foot.png 1.905524730682373
+magick tmp/main_assembly.png 2.0808165073394775
+magick tmp/main_assembly.png 0.29222631454467773
+magick tmp/main_assembly.png 2.156001329421997
+magick tmp/main_assembly.png 0.3079652786254883
+python readme.md 0.0323338508605957
+codespell readme.md 0.13754987716674805

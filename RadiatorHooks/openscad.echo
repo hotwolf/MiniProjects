@@ -1,0 +1,5 @@
+ECHO: "~main_assembly{"
+ECHO: "~RadiatorHooks_Clamp_assembly{"
+ECHO: "~RadiatorHooks_Clamp.stl(colour='[0, 0.572549, 0]')"
+ECHO: "~}RadiatorHooks_Clamp_assembly"
+ECHO: "~}main_assembly"

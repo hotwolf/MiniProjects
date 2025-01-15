@@ -33,27 +33,25 @@
 include <./DoorHandleTester_Config.scad> 
 
 
+//Sub-parts
+module clamp_corner() {
+    rotate([0,0,270])
+    rotate_extrude(angle=90)
+    translate([0,0,0]) square([clampD,clampW]);
+}
+*clamp_corner();
 
+module clamp_side() {
+    translate([0,0,-clampW/2])                rotate([0,0,0])   clamp_corner();
+    translate([-clampL,0,-clampW/2]) rotate([0,0,270]) clamp_corner();
+    translate([-clampL,-clampD,-clampW/2]) cube([clampL,clampD,clampW]);
+}
+*clamp_side();
 
-//Outlet top
+//Clamp
 module DoorHandleTester_Clamp_stl() {
     stl("DoorHandleTester_Clamp");
     //$fn=128;
-
-    module clamp_corner() {
-        rotate([0,0,270])
-        rotate_extrude(angle=90)
-        translate([0,0,0]) square([clampD,clampW]);
-    }
-    *clamp_corner();
-
-    module clamp_side() {
-        translate([0,0,-clampW/2])                rotate([0,0,0])   clamp_corner();
-        translate([-clampL,0,-clampW/2]) rotate([0,0,270]) clamp_corner();
-        translate([-clampL,-clampD,-clampW/2]) cube([clampL,clampD,clampW]);
-    }
-    *clamp_side();
-
     color(pp1_colour)
     //translate([0,-pipeY,0])
     //Top
@@ -69,11 +67,11 @@ module DoorHandleTester_Clamp_stl() {
         }
         union() {
             translate([-screwX,10,0]) rotate([90,0,0]) cylinder(r=screwHoleR,h=20);
-            translate([-screwX,10,0]) rotate([90,0,0]) cylinder(r=screwHeadR,h=screwHeadH+screwHeadC+10);     
+            translate([-screwX,60,0]) rotate([90,0,0]) cylinder(r=screwHeadR,h=screwHeadH+screwHeadC+60);     
         }
     }
 }
-*DoorHandleTesterClamp_stl();
+*DoorHandleTester_Clamp_stl();
 
 //! Attach handle to clamp
 module DoorHandleTester_Clamp_assembly() {
@@ -94,7 +92,7 @@ module DoorHandleTester_Clamp_assembly() {
 }
 
 if ($preview) {
-    $explode=0;
+    $explode=1;
     
     //Door
     explode([-40,0,0])

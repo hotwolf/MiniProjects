@@ -1,0 +1,33 @@
+tmp/KitchenVent_Outlet_assembly.png: \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/fillet.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/clip.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/rounded_rectangle.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/washer.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/maths.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/nuts.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/core.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/teardrops.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/nut.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/core.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/global_defs.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/global.scad \
+	/home/dirk/Projects/MiniProjects/KitchenVent/scad/KitchenVent_Outlet.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/screws.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/washers.scad \
+	/home/dirk/Projects/MiniProjects/KitchenVent/scad/KitchenVent_Config.scad \
+	/home/dirk/Projects/MiniProjects/KitchenVent/../lib/NopSCADlib/global_defs.scad \
+	tmp/png.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/screw.scad \
+	/home/dirk/Projects/MiniProjects/KitchenVent/scad/KitchenVent_Parts.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/sphere.scad \
+	/home/dirk/Projects/MiniProjects/KitchenVent/scad/KitchenVent_ShelfCover.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/rounded_cylinder.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/thread.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/tube.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/inserts.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/vitamins/insert.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/quadrant.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/sweep.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/bom.scad \
+	/home/dirk/Projects/MiniProjects/KitchenVent/scad/KitchenVent_TopMount.scad \
+	/home/dirk/Projects/MiniProjects/lib/NopSCADlib/utils/core/polyholes.scad

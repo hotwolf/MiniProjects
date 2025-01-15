@@ -38,7 +38,7 @@ module main_assembly() {
     assembly("main") {
 
         //Shelf
-        explode([0,-400,0]) shelf(z=pipeL/2);
+        //explode([0,-400,0]) shelf(z=pipeL/2);
 
         //Cabinet top
         explode([0,0,0]) cabinetTop(z=pipeL-boardW-10);

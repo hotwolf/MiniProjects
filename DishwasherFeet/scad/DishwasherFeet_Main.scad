@@ -1,8 +1,8 @@
 //###############################################################################
-//# KitchenVent - Configuration                                                 #
+//# DishwasherFeet - Main Assembly                                                 #
 //###############################################################################
 //#    Copyright 2024 Dirk Heisswolf                                            #
-//#    This file is part of the KitchenVent project.                            #
+//#    This file is part of the DishwasherFeet project.                            #
 //#                                                                             #
 //#    This project is free software: you can redistribute it and/or modify     #
 //#    it under the terms of the GNU General Public License as published by     #
@@ -22,34 +22,54 @@
 //#                                                                             #
 //###############################################################################
 //# Description:                                                                #
-//#   Global configurations for the DoorHandleTester project.                   #
+//#   Main assembly.                                                            #
 //#                                                                             #
 //###############################################################################
 //# Version History:                                                            #
-//#   December 15, 2024                                                         #
+//#   December 16, 2024                                                         #
 //#      - Initial release                                                      #
 //#                                                                             #
 //###############################################################################
-//include <../../lib/NopSCADlib/lib.scad>
-include <../../lib/NopSCADlib/core.scad>
-include <../../lib/NopSCADlib/vitamins/screws.scad>
-use     <../../lib/NopSCADlib/printed/handle.scad>
-use     <./DoorHandleTester_Parts.scad>
-use     <./DoorHandleTester_Clamp.scad>
+include <./DishwasherFeet_Config.scad>
 
-//Global Variables
-//doorW    = 16.4;                                //width of the door (Method)
-doorW      = 19.4;                                //width of the door (Pax)
-doorC      =  0.0;                                //door clearance
-screwT     = M4_dome_screw;                       //screw type
-screwHoleR = screw_clearance_radius(screwT);      //radius of the screw hole
-//screwHeadR = screw_head_radius(screwT);         //radius of the screw head
-screwHeadR =  10/2;                              //radius of the screw head
-//screwHeadH = screw_head_height(screwT);         //height of the screw head
-screwHeadH =  4;                                  //height of the screw head
-screwHeadC =  0.4;                                //screw head clearance
-screwX     = 25;                                  //X position of the screw
-clampD     =  2;                                  //depth of the clamp (one side)
-clampL     = screwX+screwHeadR+clampD;            //length of the clamp (one side)
-clampW     = 20;                                  //width of the clamp (one side)
+//Printed part
+module DishwasherFeet_Foot_stl() {
+    stl("DishwasherFeet_Foot");
+    $fn=64;
+    color(pp1_colour)
+    difference() {
+        hull() {
+            cylinder(d=washerD+4, h=feetH+4);
+            translate([0,0,1])cube([carriageW+4,carriageL,2],center=true);
+            translate([-2-carriageW/2,-2-latchT-carriageL/2,0]) cube([carriageW+4,latchT+4,latchH+2]);
+            
+            
+        }
+        union() {
+            washer_cutout();
+            carriage_cutout();
+        }
+    }
+}
+
+//! Assemble all parts 
+module main_assembly() {
+    //pose([95, 0, 160],[0, 0, 50])
+    assembly("main") {
+
+        //Washer
+        explode([0,0,40]) washer();
+
+        //Foot
+        explode([0,0,20]) DishwasherFeet_Foot_stl();
+    }
+}
+
+if ($preview) {
+    $explode=1;
+    main_assembly();
+    
+    carriage();
+}
+
 

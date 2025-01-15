@@ -1,0 +1,4 @@
+{
+    "DoorHandleTester_Clamp.stl": 0.585,
+    "handle.stl": 1.556
+}

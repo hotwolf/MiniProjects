@@ -1,0 +1,3 @@
+{
+    "DishwasherFeet_Foot.stl": 0.893
+}

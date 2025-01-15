@@ -1,0 +1,4 @@
+KitchenVent_Outlet_assembly:
+Printed:
+  1 KitchenVent_Outlet_bottom.stl
+  1 KitchenVent_Outlet_top.stl

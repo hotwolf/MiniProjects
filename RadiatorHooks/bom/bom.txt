@@ -1,0 +1,25 @@
+ R   
+ a   
+ d   
+ i   
+ a   
+ t   
+ o   
+ r   
+ h   
+ o   
+ o   
+ k   
+ s   
+     
+ c   
+ l  M
+ a  a
+ m  i
+ p  n
+Printed:
+ 1|  |  1 RadiatorHooks_Clamp.stl
+
+Assemblies:
+  1 RadiatorHooks_Clamp_assembly
+  1 main_assembly

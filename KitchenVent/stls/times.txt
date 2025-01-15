@@ -1,0 +1,6 @@
+{
+    "KitchenVent_ShelfCover.stl": 0.783,
+    "KitchenVent_TopMount.stl": 1.213,
+    "KitchenVent_Outlet_top.stl": 44.126,
+    "KitchenVent_Outlet_bottom.stl": 2.555
+}

@@ -1,0 +1,11 @@
+Compiling design (CSG Products normalization)...
+Normalized CSG tree has 1 elements
+Authorization required, but no authorization protocol specified
+Unable to open a connection to the X server.
+DISPLAY=:0
+Can't create OpenGL OffscreenView. Code: -1.
+Geometries in cache: 1
+Geometry cache size in bytes: 345176
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.048
