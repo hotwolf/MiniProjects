@@ -71,7 +71,7 @@ module grommetFrame() {
         
     }
 }
-*grommetFrame();
+grommetFrame();
 
 module grommetLid() {
     color("green")
