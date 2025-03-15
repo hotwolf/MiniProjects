@@ -33,11 +33,11 @@
 include <./SkadisParts_Config.scad>
 
 //Screw positions
-sPosLeft = [[-3.5*SkadisHoleSx, 1.5*SkadisHoleSy,0],
-            [-3.5*SkadisHoleSx,-1.5*SkadisHoleSy,0]];
+sPosLeft = [[-4*SkadisHoleSx, 1.5*SkadisHoleSy,0],
+            [-4*SkadisHoleSx,-1.5*SkadisHoleSy,0]];
 
-sPosRight = [[ 3.5*SkadisHoleSx, 1.5*SkadisHoleSy,0],
-             [ 3.5*SkadisHoleSx,-1.5*SkadisHoleSy,0]];
+sPosRight = [[ 4*SkadisHoleSx, 1.5*SkadisHoleSy,0],
+             [ 4*SkadisHoleSx,-1.5*SkadisHoleSy,0]];
 
 sPos = concat(sPosLeft, sPosRight);
 
@@ -59,7 +59,7 @@ module extensionCord() {
                 translate([ 20,0,0]) scale([40,77,2.4]) cylinder(h=1, d=1);
                 translate([  0,0,0]) scale([40,77,2.4]) cylinder(h=1, d=1);
             }
-            translate([  0,0,0]) scale([40,77,10]) cylinder(h=1, d=1);
+            #translate([  0,0,0]) scale([40,77,10]) cylinder(h=1, d=1);
         }        
 }
 *extensionCord();
@@ -75,14 +75,14 @@ module skadisExtensionCordMount_stl() {
             //Holder
             hull() {
                 for (pos = sPosLeft) translate(pos) cylinder(h=5, d=20);
-                for (pos = sPosLeft) translate(pos) translate([SkadisHoleSx/2,0,0]) cylinder(h=5, d=20);
+                *for (pos = sPosLeft) translate(pos) translate([SkadisHoleSx/2,0,0]) cylinder(h=5, d=20);
 
-                translate([-3*SkadisHoleSx,-0.5*SkadisHoleSy,0]) cylinder(h=5, d=35);
-                translate([-3*SkadisHoleSx, 0.5*SkadisHoleSy,0]) cylinder(h=5, d=35);
+                translate([-3*SkadisHoleSx,-1*SkadisHoleSy,0]) cylinder(h=5, d=35);
+                translate([-3*SkadisHoleSx, 1*SkadisHoleSy,0]) cylinder(h=5, d=35);
 
 
-                translate([-3.5*SkadisHoleSx,-0.5*SkadisHoleSy,0]) cylinder(h=5, d=35);
-                translate([-3.5*SkadisHoleSx, 0.5*SkadisHoleSy,0]) cylinder(h=5, d=35);
+                translate([-4*SkadisHoleSx,-0.5*SkadisHoleSy,0]) cylinder(h=5, d=35);
+                translate([-4*SkadisHoleSx, 0.5*SkadisHoleSy,0]) cylinder(h=5, d=35);
             }
             
             
@@ -93,12 +93,12 @@ module skadisExtensionCordMount_stl() {
         union() {
             //Extension cord
             hull() {
-                translate([-132,0,0]) scale([42,79,2.8]) cylinder(h=1, d=1);
-                translate([ 132,0,0]) scale([42,79,2.8]) cylinder(h=1, d=1);
+                translate([-150,0,0]) scale([42,79,2.8]) cylinder(h=1, d=1);
+                translate([ 150,0,0]) scale([42,79,2.8]) cylinder(h=1, d=1);
             }
             hull() {
-                translate([-112,0,0]) scale([42,79,20]) cylinder(h=1, d=1);
-                translate([ 112,0,0]) scale([42,79,20]) cylinder(h=1, d=1);
+                translate([-130,0,0]) scale([42,79,20]) cylinder(h=1, d=1);
+                translate([ 130,0,0]) scale([42,79,20]) cylinder(h=1, d=1);
             }
             //Screws
             for (pos = sPosLeft) translate(pos) { 
@@ -138,12 +138,12 @@ if($preview) {
     $explode = 0;
     
     //Extension cord mount
-    *skadisExtensionCordMount_assembly();
+    skadisExtensionCordMount_assembly();
     
     //Extension Cord 
     extensionCord();
     
     //Skadis board
-    translate([-4.5*SkadisHoleSx,-3*SkadisHoleSy,0]) skandisBoard();
+    translate([-4.5*SkadisHoleSx,-3.5*SkadisHoleSy,0]) skandisBoard();
 }
 

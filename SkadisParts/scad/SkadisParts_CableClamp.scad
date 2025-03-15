@@ -52,10 +52,10 @@ module skadisEdgeClamp_stl() {
                     cylinder(d=5, h=1.1);
                     *translate([0,-(SkadisHoleDy-SkadisHoleDx)/2,(SkadisDz/2)-1])
                     cylinder(d=5, h=1.1);
-                    translate([0,(SkadisHoleDy-SkadisHoleDx)/2,(SkadisDz/2)])
+                    translate([0,(SkadisHoleDy-SkadisHoleDx)/2,(SkadisDz/2)+0.1])
                     rotate([180,0,0])
                     cylinder(d1=5, d2=1, h=2);
-                    translate([0,-(SkadisHoleDy-SkadisHoleDx)/2,(SkadisDz/2)])
+                    translate([0,-(SkadisHoleDy-SkadisHoleDx)/2,(SkadisDz/2)+0.1])
                     rotate([180,0,0])
                     cylinder(d1=5, d2=1, h=2);
                 }
@@ -95,7 +95,7 @@ module skadisEdgeClamp_stl() {
             translate([-0.1-SkadisHoleSx/2,-40,0])
             cube([cordD,80,(cordD/2)+(SkadisDz/2)]);
             translate([-0.1-SkadisHoleSx/2,-40,(SkadisDz/2)-0.9])
-            cube([cordD+10,80,1]);
+            cube([cordD+8,80,1]);
         }   
     }
 }    

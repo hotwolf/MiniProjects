@@ -41,7 +41,7 @@ rimB    =  0.8; //bevel ratio (0=no bevel, 1=full thickness)
 gapW    =  0.2; //width of the gap between lid and frame
 ridgeT  =  0.2; //thickness of the outer ridges
 ridgeA  = 30;   //angle between ridges
-$fn=256;
+$fn = 256;
 
 module grommetFrame() {
     color("blue")
@@ -71,9 +71,9 @@ module grommetFrame() {
         
     }
 }
-grommetFrame();
+*grommetFrame();
 
-module grommetLid() {
+module grommetLid(lidTopT=lidTopT) {
     color("green")
     union() {
         rotate_extrude() {
@@ -103,4 +103,21 @@ module grommetLid_cutout(cutoutD=25, cutoutN=2) {
         }                           
     }
 }   
-grommetLid_cutout();
+*grommetLid_cutout(cutoutD=12, cutoutN=3);
+
+module grommetLid_2cutouts(cutoutD1=25, cutoutA1=0, cutoutD2=15, cutoutA2=180, ) {
+    difference() {
+        grommetLid();
+        union() {
+            rotate([0,0,cutoutA1]) {
+                translate([(outerD-cutoutD1)/2,0,-50]) cylinder(h=outerH+100, d=cutoutD1);
+                translate([(outerD-cutoutD1)/2,-cutoutD1/2,-50]) cube([cutoutD1,cutoutD1,outerH+100]);
+            }
+            rotate([0,0,cutoutA2]) {
+                translate([(outerD-cutoutD2)/2,0,-50]) cylinder(h=outerH+100, d=cutoutD2);
+                translate([(outerD-cutoutD2)/2,-cutoutD2/2,-50]) cube([cutoutD2,cutoutD2,outerH+100]);
+            }
+        }                           
+    }
+}   
+grommetLid_2cutouts(cutoutD1=24, cutoutD2=12);
